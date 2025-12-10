@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:momarketplace/screens/splash/view/splash.dart';
+import 'package:momarketplace/theme/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mo MarketPlace',
-      theme: ThemeData(
-      ),
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
+        darkTheme: AppTheme.darkTheme,
+        theme: AppTheme.lightTheme,
+        debugShowCheckedModeBanner: false,
+        themeMode:ThemeMode.system,
       home:  SplashScreen()
     );
   }
