@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: any
   flutter_svg: ^2.0.17
+  carousel_slider: ^5.1.1
+  curved_navigation_bar: ^1.0.6
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +67,30 @@ flutter:
      - assets/icons/menu.png
      - assets/icons/menu_1.png
      - assets/icons/menu-alt-2.png
+     - assets/icons/womenfashion.png
+     - assets/icons/mensfashion.png
+     - assets/icons/sofa.png
+     - assets/icons/toys.png
+     - assets/icons/baby.png
+     - assets/icons/property.png
+     - assets/icons/sports.png
+     - assets/icons/beauty.png
+     - assets/icons/appliance.png
+     - assets/icons/sports_equip.png
+     - assets/icons/computertech.png
+     - assets/icons/mobilesgadgets.png
+     - assets/icons/mobilesgadgets.png
+     - assets/icons/health.png
+     - assets/icons/audio.png
+     - assets/icons/gaming.png
+     - assets/icons/photography.png
+     - assets/icons/petsupplies.png
+     - assets/icons/vehicle.png
+     - assets/icons/property.png
+     - assets/icons/property_new.png
+     - assets/images/carousel_image1.jpg
+     - assets/images/carousel_image2.jpg
+     - assets/images/carousel_image3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

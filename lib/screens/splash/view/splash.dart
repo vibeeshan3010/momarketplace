@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:momarketplace/util/appcolors.dart';
+import 'package:momarketplace/widgets/bottomnavigationbar.dart';
 import '../../home/view/home.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
@@ -51,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen>
           if (mounted) {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (_) => HomeScreen()),
+              MaterialPageRoute(builder: (_) => CustomBottomNavigationBar()),
             );
           }
         });

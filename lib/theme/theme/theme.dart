@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../util/appcolors.dart';
+import '../customThemes/iconTheme.dart';
 import '../customThemes/textTheme.dart';
 
 class AppTheme{
@@ -11,6 +12,7 @@ class AppTheme{
     scaffoldBackgroundColor: AppColors.white,
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTheme,
+    iconTheme: TIconTheme.lightTheme,
   );
   static var darkTheme = ThemeData(
     useMaterial3: true,
@@ -18,5 +20,6 @@ class AppTheme{
     scaffoldBackgroundColor: AppColors.black,
     brightness: Brightness.dark,
     textTheme: TTextTheme.darktheme,
+    iconTheme: TIconTheme.darkTheme,
   );
 }
