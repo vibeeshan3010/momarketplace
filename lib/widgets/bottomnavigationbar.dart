@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:momarketplace/screens/addproducts/view/addproducts.dart';
 import 'package:momarketplace/screens/categories/view/categories.dart';
 import 'package:momarketplace/screens/chat/view/chatscreen.dart';
 import 'package:momarketplace/screens/home/view/home.dart';
@@ -16,22 +17,55 @@ class CustomBottomNavigationBar extends StatefulWidget {
 class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _currentIndex = 0;
 
+  final List<String> _titles = [
+    "Welcome",
+    "Categories",
+    "Add Products",
+    "Chat",
+    "Profile",
+  ];
+
   final List<Widget> _screens = [
     HomeScreen(),
     Categories(),
+    AddProducts(),
     ChatScreen(),
     LoginScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
+      appBar: AppBar(
+        leading:Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: Container(decoration:BoxDecoration(
+              shape: BoxShape.circle
+          ),
+            child: Image.asset("assets/icons/menu-alt-2.png",height: 75,width: 50,color: Theme.of(context).iconTheme.color),
+          ),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        title: Text(
+          _titles[_currentIndex],
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: isDarkMode ? Colors.white : Colors.black,
+          ),
+        ),
+      ),
+
       body: _screens[_currentIndex],
 
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.red,
         buttonBackgroundColor: Colors.red,
-        backgroundColor: Colors.white,
+        backgroundColor: isDarkMode ? AppColors.black : AppColors.white,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         index: _currentIndex,
@@ -40,13 +74,15 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             _currentIndex = index;
           });
         },
-        items: [
-          Icon(Icons.home, size: 30,color: Colors.white),
-          Icon(Icons.category, size: 30,color: Colors.white),
-          Icon(Icons.chat, size: 30,color: Colors.white),
-          Icon(Icons.person, size: 30,color: Colors.white),
+        items:  [
+          Image.asset("assets/images/app_image.png",height: 40,width: 40,),
+          Icon(Icons.category, size: 30, color: Colors.white),
+          Icon(Icons.add, size: 30, color: Colors.white),
+          Icon(Icons.chat, size: 30, color: Colors.white),
+          Icon(Icons.person, size: 30, color: Colors.white),
         ],
       ),
     );
   }
 }
+

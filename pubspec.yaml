@@ -86,11 +86,14 @@ flutter:
      - assets/icons/photography.png
      - assets/icons/petsupplies.png
      - assets/icons/vehicle.png
+     - assets/icons/star.png
      - assets/icons/property.png
      - assets/icons/property_new.png
      - assets/images/carousel_image1.jpg
      - assets/images/carousel_image2.jpg
      - assets/images/carousel_image3.jpg
+     - assets/images/app_image.png
+     - assets/images/app_image_red.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

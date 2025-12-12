@@ -17,4 +17,9 @@ class AppStrings{
   static const String petsupplies = "Pet Supplies";
   static const String vehicle = "Vehicle";
   static const String properties = "Properties";
+  static const String search = "Search";
+  static const String topproducts = "Top Products";
+  static const String logintocontinue = "Please login to continue";
+  static const String chat = "Chat";
+  static const String addproducts = "Add Products";
 }
