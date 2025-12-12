@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../util/appcolors.dart';
 import '../util/strings.dart';
 
 class Searchbar extends StatefulWidget {
@@ -17,10 +18,12 @@ class _SearchbarState extends State<Searchbar> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       child: TextField(
+        style: TextStyle(color: AppColors.black),
+        cursorColor: AppColors.black,
         controller: searchController,
         decoration: InputDecoration(
           hintText: AppStrings.search,
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: Icon(Icons.search,color: AppColors.black,),
           filled: true,
           fillColor: Colors.grey.shade200,
           border: OutlineInputBorder(

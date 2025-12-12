@@ -13,6 +13,7 @@ class AppStrings{
   static const String healthandnutrition = "Health & Nutrition";
   static const String audiosterioequipments = "Audio & Stereo Equipments";
   static const String vgaming = "Video Gaming";
+  static const String designer = "Designer";
   static const String photography = "Photography";
   static const String petsupplies = "Pet Supplies";
   static const String vehicle = "Vehicle";
@@ -22,4 +23,17 @@ class AppStrings{
   static const String logintocontinue = "Please login to continue";
   static const String chat = "Chat";
   static const String addproducts = "Add Products";
+  static const String moose ="Moose";
+  static const String mimosa = "Mimosa";
+  static const String kellyfelder = "Kelly Felder";
+  static const String carnage = "Carnage";
+  static const String avi = "AVI";
+  static const String scyzellus = "Scyla Zellus";
+
+  static const String boostproducts ="Boost your products";
+  static const String playstation ="PlayStation 4";
+  static const String redpartydress ="Red Party Dress";
+  static const String blackshortdrees = "Black Short Dress";
+
+  static const String denim = "Denim";
 }

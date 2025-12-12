@@ -14,7 +14,7 @@ class GlobalSnackBar {
       behavior: SnackBarBehavior.floating,
       dismissDirection: DismissDirection.up,
       margin: EdgeInsets.only(
-        bottom: MediaQuery.of(context).size.height - 250,
+        bottom: MediaQuery.of(context).size.height - 260,
         left: 10,
         right: 10,
       ),

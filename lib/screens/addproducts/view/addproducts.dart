@@ -54,14 +54,10 @@ class _AddProductsState extends State<AddProducts> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                           Image.asset("assets/images/app_image_red.png",height: 100,),
-                        const SizedBox(height: 16),
-                        const Text(
-                          "Please login to continue",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),
+                       SizedBox(height: 16),
+                        Text(
+                          AppStrings.logintocontinue,
+                          style: Theme.of(context).textTheme.titleSmall,
                         )
                       ],
                     ),

@@ -38,7 +38,10 @@ class _ChatscreenState extends State<ChatScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset("assets/images/app_image_red.png",height: 100,),
-                  Text(AppStrings.logintocontinue,style: Theme.of(context).textTheme.bodyMedium,),
+                  Text(
+                    AppStrings.logintocontinue,
+                    style: Theme.of(context).textTheme.titleSmall,
+                  )
                 ],
               ),),
           ),
