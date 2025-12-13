@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   final String image;
   final String title;
-  final String saleimage;
+  final String price;
+  final String? saleimage;
 
   const ProductCard({
     super.key,
     required this.image,
-    required this.saleimage,
+    this.saleimage,
     required this.title,
+    required this.price,
   });
 
   @override
@@ -19,7 +21,6 @@ class ProductCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.0),
       ),
-      height: 300,
       width: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,25 +50,28 @@ class ProductCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Row(
+          Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-      Text(
-        title,
-        style: Theme.of(context).textTheme.titleSmall,
-        textAlign: TextAlign.left,
+      Expanded(
+        child: Text(
+          title,
+          maxLines: 2,
+          style: Theme.of(context).textTheme.bodyLarge,
+          textAlign: TextAlign.left,
+        ),
       ),
-      Image.asset(
-        saleimage,
-        height: 24, // constrain size
-        width: 24,
-        fit: BoxFit.contain,
-      ),
+      if(saleimage != null)
+        Image.asset(
+          saleimage!,
+          height: 24,
+          width: 24,
+          fit: BoxFit.contain,
+        ),
+
     ],
-    )
-          ),
+    ),
+          Text(price),
         ],
       ),
     );

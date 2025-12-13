@@ -7,6 +7,8 @@ import 'package:momarketplace/screens/home/view/home.dart';
 import 'package:momarketplace/screens/login/view/login.dart';
 import 'package:momarketplace/util/appcolors.dart';
 
+import '../util/strings.dart';
+
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
 
@@ -18,11 +20,11 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _currentIndex = 0;
 
   final List<String> _titles = [
-    "Welcome",
-    "Categories",
-    "Add Products",
-    "Chat",
-    "Profile",
+    AppStrings.welcome,
+    AppStrings.products,
+    AppStrings.addproducts,
+    AppStrings.chat,
+    AppStrings.login,
   ];
 
   final List<Widget> _screens = [
@@ -39,17 +41,21 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
     return Scaffold(
       appBar: AppBar(
-        leading:Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Container(decoration:BoxDecoration(
-              shape: BoxShape.circle
-          ),
-            child: Image.asset("assets/icons/menu-alt-2.png",height: 75,width: 50,color: Theme.of(context).iconTheme.color),
-          ),
-        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
+        shadowColor: Colors.transparent,
         centerTitle: true,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: Image.asset(
+            "assets/icons/menu-alt-2.png",
+            height: 75,
+            width: 50,
+            color: Theme.of(context).iconTheme.color,
+          ),
+        ),
         title: Text(
           _titles[_currentIndex],
           style: TextStyle(
@@ -59,6 +65,7 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
         ),
       ),
+
 
       body: _screens[_currentIndex],
 
@@ -76,7 +83,7 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         },
         items:  [
           Image.asset("assets/images/app_image.png",height: 40,width: 40,),
-          Icon(Icons.category, size: 30, color: Colors.white),
+          Icon(Icons.shopping_bag, size: 30, color: Colors.white),
           Icon(Icons.add, size: 30, color: Colors.white),
           Icon(Icons.chat, size: 30, color: Colors.white),
           Icon(Icons.person, size: 30, color: Colors.white),

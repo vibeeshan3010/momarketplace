@@ -91,6 +91,7 @@ flutter:
      - assets/icons/petsupplies.png
      - assets/icons/vehicle.png
      - assets/icons/star.png
+     - assets/icons/recent.png
      - assets/icons/property.png
      - assets/icons/property_new.png
      - assets/images/carousel_image1.jpg
@@ -109,8 +110,22 @@ flutter:
      - assets/images/product3.jpg
      - assets/images/product4.png
      - assets/images/product5.jpg
-     - assets/images/add.png
-
+     - assets/images/gucci.jpg
+     - assets/images/hermes.jpg
+     - assets/images/rolex.jpg
+     - assets/images/dior.jpg
+     - assets/images/audemarspiguet.jpeg
+     - assets/images/recent1.jpg
+     - assets/images/recent2.jpg
+     - assets/images/recent3.jpeg
+     - assets/images/recent4.jpg
+     - assets/images/recent5.jpg
+     - assets/images/recent6.jpg
+     - assets/images/recent7.jpg
+     - assets/images/partyballoon.jpg
+     - assets/images/soap.jpg
+     - assets/images/babysoap.jpg
+     - assets/images/fancy_bottle.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
