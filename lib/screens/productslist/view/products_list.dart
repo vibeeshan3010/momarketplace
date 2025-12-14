@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:momarketplace/provider/products_provider.dart';
+import 'package:momarketplace/widgets/products_card.dart';
 import 'package:provider/provider.dart';
 
-import '../../../providers/products_provider.dart';
 class ProductsList extends StatefulWidget {
   const ProductsList({super.key});
 
@@ -16,7 +17,6 @@ class _ProductsListState extends State<ProductsList> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
      getProduct();
@@ -26,17 +26,37 @@ class _ProductsListState extends State<ProductsList> {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ProductsProvider>(context,listen: false);
     return Scaffold(
-        body:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("ProductsList")
-          ],
-        ));
+      appBar: AppBar(
+        title: const Text('Products'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
+      body: provider.isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : provider.products.isEmpty
+          ? const Center(child: Text('No products available'))
+          : ListView.builder(
+        itemCount: provider.products.length,
+        padding: const EdgeInsets.all(8), // Added padding
+        itemBuilder: (context, index) {
+          final product = provider.products[index];
+          return ProductsCard(
+            title: product.title,
+            price: product.price, // Pass as double, not string
+            url: product.thumbnail,
+            rating: product.rating,
+            brand: product.brand,
+            discount: product.discountPercentage,
+          );
+        },
+      ),
+    );
   }
 
   void getProduct() async {
-    final productprovider = Provider.of<ProductProvider>(context,listen: false);
+    final productprovider = Provider.of<ProductsProvider>(context,listen: false);
     productprovider.getProducts();
   }
 }

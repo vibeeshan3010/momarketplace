@@ -6,7 +6,7 @@ import 'package:momarketplace/screens/login/view/login.dart';
 import 'package:momarketplace/screens/productslist/view/products_list.dart';
 import 'package:momarketplace/util/app_colors.dart';
 
-import '../screens/product/view/add_products.dart';
+import '../screens/addproducts/view/add_products.dart';
 import '../util/strings.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:momarketplace/providers/products_provider.dart';
+import 'package:momarketplace/provider/products_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'package:momarketplace/screens/splash/view/splash.dart';
@@ -19,11 +19,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
-      child: MultiProvider(
+    return MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (_) => ProductProvider()),
+          ChangeNotifierProvider(create: (_) => ProductsProvider()),
         ],
         child: MaterialApp(
           // navigatorKey: navigatorKey,
@@ -36,7 +34,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: const SplashScreen(),
         ),
-      ),
+
     );
   }
 }

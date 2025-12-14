@@ -9,7 +9,7 @@ import '../../../util/strings.dart';
 import '../../../widgets/brand_circle.dart';
 import '../../../widgets/product_card.dart';
 import '../../../widgets/searchbar.dart';
-import '../../product/model/product.dart';
+import '../../addproducts/model/product_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,88 +19,88 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Product> products = [
-    Product(
+  final List<ProductModel> products = [
+    ProductModel(
       image: "assets/images/rolex.jpg",
       title: AppStrings.rolex,
       saleimage: "assets/icons/urgent.png",
       price: "Rs.145000",
     ),
-    Product(
+    ProductModel(
       image: "assets/images/dior.jpg",
       title: AppStrings.christiandior,
       saleimage: "assets/icons/featured.png",
       price: "Rs.85000",
     ),
-    Product(
+    ProductModel(
       image: "assets/images/hermes.jpg",
       title: AppStrings.hermes,
       saleimage: "assets/icons/urgent.png",
       price: "Rs.100000",
     ),
-    Product(
+    ProductModel(
       image: "assets/images/gucci.jpg",
       title: AppStrings.gucci,
       saleimage: "assets/icons/featured.png",
       price: "Rs.45000",
     ),
-    Product(
+    ProductModel(
       image: "assets/images/audemarspiguet.jpeg",
       title: AppStrings.ap,
       saleimage: "assets/icons/urgent.png",
       price: "Rs.75000",
     ),
   ];
-  final List<Product> recentitems = [
-    Product(
+  final List<ProductModel> recentitems = [
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon12pcs,
       price: "Rs.70",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon10pcs,
       price: "Rs.60",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon5pcs,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon5pcs,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/babysoap.jpg",
       title: AppStrings.babysoap,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/soap.jpg",
       title: AppStrings.soap,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/fancy_bottle.jpg",
       title: AppStrings.fancywaterbottle,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon5pcs,
       price: "Rs.30",
       saleimage: '',
     ),
-    Product(
+    ProductModel(
       image: "assets/images/partyballoon.jpg",
       title: AppStrings.partyballoon5pcs,
       price: "Rs.30",
