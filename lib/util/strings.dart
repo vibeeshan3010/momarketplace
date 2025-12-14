@@ -63,6 +63,7 @@ class AppStrings{
   static String recentlyadded = "Recently added";
 
   static String login = "login";
+  static String Login = "Login";
   static String register = "register";
 
   static const String mobilenumber = "Mobile Number *";

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:momarketplace/theme/customThemes/snackBarTheme.dart';
+import 'package:momarketplace/theme/customThemes/snackbar_theme.dart';
 
-import '../../util/appcolors.dart';
-import '../customThemes/iconTheme.dart';
-import '../customThemes/textTheme.dart';
+import '../../util/app_colors.dart';
+import '../customThemes/icon_theme.dart';
+import '../customThemes/text_theme.dart';
 
 class AppTheme{
+  AppTheme._();
   static var lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: GoogleFonts.plusJakartaSans().fontFamily,

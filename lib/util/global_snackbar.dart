@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'appcolors.dart';
+import 'app_colors.dart';
 
 class GlobalSnackBar {
   static show(

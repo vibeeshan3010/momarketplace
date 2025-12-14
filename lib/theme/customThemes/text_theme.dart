@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../util/appcolors.dart';
+import '../../util/app_colors.dart';
 
 class TTextTheme {
   TTextTheme._();

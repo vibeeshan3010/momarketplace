@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:momarketplace/util/GlobalSnackBar.dart';
-import 'package:momarketplace/util/appcolors.dart';
+import 'package:momarketplace/util/global_snackbar.dart';
+import 'package:momarketplace/util/app_colors.dart';
 import '../../../util/strings.dart';
 
 class ChatScreen extends StatefulWidget {

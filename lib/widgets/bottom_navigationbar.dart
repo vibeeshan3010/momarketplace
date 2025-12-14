@@ -1,12 +1,12 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:momarketplace/screens/addproducts/view/addproducts.dart';
-import 'package:momarketplace/screens/categories/view/categories.dart';
-import 'package:momarketplace/screens/chat/view/chatscreen.dart';
+import 'package:momarketplace/screens/chat/view/chat_screen.dart';
 import 'package:momarketplace/screens/home/view/home.dart';
 import 'package:momarketplace/screens/login/view/login.dart';
-import 'package:momarketplace/util/appcolors.dart';
+import 'package:momarketplace/screens/productslist/view/products_list.dart';
+import 'package:momarketplace/util/app_colors.dart';
 
+import '../screens/product/view/add_products.dart';
 import '../util/strings.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -24,12 +24,12 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     AppStrings.products,
     AppStrings.addproducts,
     AppStrings.chat,
-    AppStrings.login,
+    AppStrings.Login,
   ];
 
   final List<Widget> _screens = [
     HomeScreen(),
-    Categories(),
+    ProductsList(),
     AddProducts(),
     ChatScreen(),
     LoginScreen(),

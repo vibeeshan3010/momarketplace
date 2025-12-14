@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../../../util/GlobalSnackBar.dart';
+import '../../../util/global_snackbar.dart';
 import '../../../util/strings.dart';
 class AddProducts extends StatefulWidget {
   const AddProducts({super.key});

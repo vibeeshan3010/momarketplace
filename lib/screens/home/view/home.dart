@@ -2,14 +2,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_decoration/dotted_decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:momarketplace/util/appcolors.dart';
-import 'package:momarketplace/widgets/bottomnavigationbar.dart';
+import 'package:momarketplace/util/app_colors.dart';
+import 'package:momarketplace/widgets/bottom_navigationbar.dart';
 
 import '../../../util/strings.dart';
-import '../../../widgets/BrandCircle.dart';
-import '../../../widgets/ProductCard.dart';
+import '../../../widgets/brand_circle.dart';
+import '../../../widgets/product_card.dart';
 import '../../../widgets/searchbar.dart';
-import '../../addproducts/model/Product.dart';
+import '../../product/model/product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
