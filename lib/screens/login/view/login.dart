@@ -77,27 +77,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                           },
                           child: Text(AppStrings.login.toUpperCase()),
-                          style: ElevatedButton.styleFrom(
-                            // 1. **Colors**
-                            backgroundColor: AppColors.red,
-                            foregroundColor: AppColors.white,
-                            // 2. **Shape/Corners**
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12), // Adds 12-pixel rounded corners
-                            ),
-
-                            // 3. **Padding/Size**
-                            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15), // Custom inner padding
-
-                            // 4. **Text Style**
-                            textStyle: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-
-                            // 5. **Elevation (Shadow)**
-                            elevation: 8, // Controls the depth/size of the shadow
-                          ),
                         )
                       ],
                     ),
@@ -238,27 +217,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                           },
                           child: Text(AppStrings.register.toUpperCase()),
-                          style: ElevatedButton.styleFrom(
-                            // 1. **Colors**
-                            backgroundColor: AppColors.red,
-                            foregroundColor: AppColors.white,
-                            // 2. **Shape/Corners**
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12), // Adds 12-pixel rounded corners
-                            ),
-
-                            // 3. **Padding/Size**
-                            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15), // Custom inner padding
-
-                            // 4. **Text Style**
-                            textStyle: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-
-                            // 5. **Elevation (Shadow)**
-                            elevation: 8, // Controls the depth/size of the shadow
-                          ),
                         )
                       ],
                     ),

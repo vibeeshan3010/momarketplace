@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:momarketplace/theme/customThemes/button_theme.dart';
 import 'package:momarketplace/theme/customThemes/snackbar_theme.dart';
 
 import '../../util/app_colors.dart';
@@ -15,6 +16,7 @@ class AppTheme{
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTheme,
     iconTheme: TIconTheme.lightTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightTheme,
     snackBarTheme: TSnackBarTheme.lightTheme,
   );
   static var darkTheme = ThemeData(
@@ -23,6 +25,7 @@ class AppTheme{
     scaffoldBackgroundColor: AppColors.black,
     brightness: Brightness.dark,
     textTheme: TTextTheme.darktheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightTheme,
     snackBarTheme: TSnackBarTheme.darkTheme,
     iconTheme: TIconTheme.darkTheme,
   );
