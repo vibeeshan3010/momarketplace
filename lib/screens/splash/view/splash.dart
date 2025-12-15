@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:momarketplace/util/app_colors.dart';
 import 'package:momarketplace/widgets/bottom_navigationbar.dart';
+import '../../../route/routes.dart';
 import '../../home/view/home.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
@@ -50,9 +51,9 @@ class _SplashScreenState extends State<SplashScreen>
       if (status == AnimationStatus.completed) {
         Future.delayed(const Duration(milliseconds: 300), () {
           if (mounted) {
-            Navigator.pushReplacement(
+            Navigator.pushReplacementNamed(
               context,
-              MaterialPageRoute(builder: (_) => CustomBottomNavigationBar()),
+              Routes.bottomnav
             );
           }
         });

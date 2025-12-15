@@ -116,7 +116,6 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     _scrollController.addListener(() {
       if (_scrollController.offset >= 100) {
-        // Show button when scrolled down 300 pixels
         setState(() {
           _showBackToTopButton = true;
         });

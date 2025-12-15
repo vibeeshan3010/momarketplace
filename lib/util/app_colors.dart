@@ -5,4 +5,5 @@ class AppColors{
   static var black = Color(0xFF000000);
   static var grey = Color(0xFFD9D9D9);
   static var red =Color(0xFFe72236);
+  static var amber =Color(0xFFFFBF00);
 }

@@ -73,4 +73,18 @@ class AppStrings{
   static const String  email ="Email *";
   static const String  mobile ="Mobile Number *";
   static const String  referalcode ="Referral Code *";
+  static const String  noproducts ="No products available";
+  static const String  description ="Description";
+  static const String  dimension ="Dimensions";
+  static const String  weight ="Weight";
+  static const String  addtocart ="Add to cart";
+  static const String makeanoffer = "Make an offer";
+  static const String report = "Report";
+  static const String reportcaption = "If you think this product is not suitable for MO, please report it.";
+  static const String damageditem = "Damaged item";
+  static const String falseinfo = "False information";
+  static const String notbabysafe = "Not baby safe";
+  static const String other = "Other";
+  static const String sendreport = "Send Report";
+  static const String cancel = "Cancel";
 }
