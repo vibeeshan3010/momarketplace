@@ -723,7 +723,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SizedBox(height: 15),
                 SizedBox(
-                  height: 260,
+                  height: 300,
                   child: PageView.builder(
                     controller: PageController(
                       viewportFraction: 0.75, // shows part of next card
@@ -846,7 +846,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ProductCard(
                               image: "assets/images/product5.jpg",
                               title: AppStrings.iphone,
-                              saleimage: "assets/icons/urgent.png",
                               price: "Rs.350000",
                             ),
                           ],
@@ -889,10 +888,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: recentitems.length,
                     itemBuilder: (context, index) {
                       final product = recentitems[index];
-                      return ProductCard(
-                        image: product.image,
-                        title: product.title,
-                        price: product.price,
+                      return SizedBox(
+                        child: ProductCard(
+                          image: product.image,
+                          title: product.title,
+                          price: product.price,
+                        ),
                       );
                     },
                   ),

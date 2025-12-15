@@ -34,7 +34,7 @@ class AppStrings{
   static const String petsupplies = "Pet Supplies";
   static const String vehicle = "Vehicle";
   static const String properties = "Properties";
-  static const String search = "Search";
+  static const String search = "Search MO marketplace";
   static const String topproducts = "Top Products";
   static const String logintocontinue = "Please login to continue";
   static const String createaccount = "Create an account";

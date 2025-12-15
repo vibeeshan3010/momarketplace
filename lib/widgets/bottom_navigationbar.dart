@@ -40,6 +40,34 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text(
+                'Menu',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {
+                Navigator.pop(context); // close drawer
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -47,15 +75,25 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         surfaceTintColor: Colors.transparent,
         shadowColor: Colors.transparent,
         centerTitle: true,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Image.asset(
-            "assets/icons/menu-alt-2.png",
-            height: 75,
-            width: 50,
-            color: Theme.of(context).iconTheme.color,
-          ),
+        leading: Builder(
+          builder: (context) {
+            return Padding(
+              padding: const EdgeInsets.only(left: 16.0),
+              child: GestureDetector(
+                onTap: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                child: Image.asset(
+                  "assets/icons/menu-alt-2.png",
+                  height: 75,
+                  width: 50,
+                  color: Theme.of(context).iconTheme.color,
+                ),
+              ),
+            );
+          },
         ),
+
         title: Text(
           _titles[_currentIndex],
           style: TextStyle(

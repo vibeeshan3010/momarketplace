@@ -87,7 +87,7 @@ class TTextTheme {
     displayLarge: GoogleFonts.inter(
         color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
     displayMedium: GoogleFonts.inter(
-        color: AppColors.white,
+        color: AppColors.black,
         fontSize: 15,
         fontWeight: FontWeight.w600),
     displaySmall: GoogleFonts.inter(

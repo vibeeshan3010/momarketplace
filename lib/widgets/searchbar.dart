@@ -23,6 +23,7 @@ class _SearchbarState extends State<Searchbar> {
         controller: searchController,
         decoration: InputDecoration(
           hintText: AppStrings.search,
+          hintStyle: Theme.of(context).textTheme.displayMedium,
           prefixIcon: Icon(Icons.search,color: AppColors.black,),
           filled: true,
           fillColor: Colors.grey.shade200,
