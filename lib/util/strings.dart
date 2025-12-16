@@ -87,4 +87,18 @@ class AppStrings{
   static const String other = "Other";
   static const String sendreport = "Send Report";
   static const String cancel = "Cancel";
+  static const String needhelp = "Need Help";
+  static const String policies = "Policies";
+  static const String guidelines = "Guidelines";
+  static const String commguidelines = "Community Guidelines";
+  static const String listingrules = "Listing Rules";
+  static const String delivery = "Delivery";
+  static const String shippingguide = "Shipping Guide";
+  static const String packageanddelivery = "Packaging & Delivery";
+  static const String prohibitedlist = "List of Prohibited Content";
+  static const String privacypolicy = "Privacy Policy";
+  static const String refundpolicy = "Refund Policy";
+  static const String termsandconditions = "Terms & Conditions";
+  static const String faq = "FAQs";
+  static const String version = "1.3.29+849";
 }
