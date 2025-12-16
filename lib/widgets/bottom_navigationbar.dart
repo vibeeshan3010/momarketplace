@@ -42,6 +42,15 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   Widget build(BuildContext context) {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
+      onDrawerChanged: (isOpen) {
+        if (!isOpen) {
+          setState(() {
+            isdeliveryclicked = false;
+            isguidelinesclicked = false;
+            ispoliciesclicked = false;
+          });
+        }
+      },
       drawer: Drawer(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
@@ -106,15 +115,15 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
 
                       children: [
                         ListTile(
-                          title:  Text(AppStrings.privacypolicy,style: Theme.of(context).textTheme.bodyMedium),
+                          title:  Text(AppStrings.privacypolicy,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () => Navigator.pop(context),
                         ),
                         ListTile(
-                          title: Text(AppStrings.refundpolicy,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.refundpolicy,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () => Navigator.pop(context),
                         ),
                         ListTile(
-                          title: Text(AppStrings.termsandconditions,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.termsandconditions,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () => Navigator.pop(context),
                         ),
                       ],
@@ -146,13 +155,13 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                       childrenPadding: const EdgeInsets.only(left: 16),
                       children: [
                         ListTile(
-                          title:  Text(AppStrings.commguidelines,style: Theme.of(context).textTheme.bodyMedium),
+                          title:  Text(AppStrings.commguidelines,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () {
                             Navigator.pop(context);
                           },
                         ),
                         ListTile(
-                          title: Text(AppStrings.listingrules,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.listingrules,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () {
                             Navigator.pop(context);
                           },
@@ -186,19 +195,19 @@ class CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                       childrenPadding: const EdgeInsets.only(left: 16),
                       children: [
                         ListTile(
-                          title: Text(AppStrings.shippingguide,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.shippingguide,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () {
                             Navigator.pop(context);
                           },
                         ),
                         ListTile(
-                          title: Text(AppStrings.packageanddelivery,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.packageanddelivery,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () {
                             Navigator.pop(context);
                           },
                         ),
                         ListTile(
-                          title: Text(AppStrings.prohibitedlist,style: Theme.of(context).textTheme.bodyMedium),
+                          title: Text(AppStrings.prohibitedlist,style: Theme.of(context).textTheme.bodySmall),
                           onTap: () {
                             Navigator.pop(context);
                           },
