@@ -186,9 +186,8 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
                           SizedBox(height: 10),
-                          Text(AppStrings.reportcaption),
-
-
+                          Text(AppStrings.reportcaption, style:  Theme.of(context).textTheme.displaySmall,),
+                          SizedBox(height: 10,),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start, // aligns to start
                             children: [
@@ -207,7 +206,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                             });
                                           },
                                         ),
-                                        const Text(AppStrings.falseinfo),
+                                      Text(AppStrings.falseinfo,style:  Theme.of(context).textTheme.displaySmall),
                                       ],
                                     ),
                                   ),
@@ -225,7 +224,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                             });
                                           },
                                         ),
-                                        const Text(AppStrings.damageditem),
+                                       Text(AppStrings.damageditem,style:  Theme.of(context).textTheme.displaySmall),
                                       ],
                                     ),
                                   ),
@@ -246,7 +245,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                             });
                                           },
                                         ),
-                                        const Text(AppStrings.notbabysafe),
+                                        Text(AppStrings.notbabysafe,style:  Theme.of(context).textTheme.displaySmall),
                                       ],
                                     ),
                                   ),
@@ -263,7 +262,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                             });
                                           },
                                         ),
-                                        const Text(AppStrings.other),
+                                        Text(AppStrings.other,style:  Theme.of(context).textTheme.displaySmall),
                                       ],
                                     ),
                                   ),
