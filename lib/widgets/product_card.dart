@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:momarketplace/util/app_colors.dart';
 
 class ProductCard extends StatelessWidget {
@@ -38,20 +39,34 @@ class ProductCard extends StatelessWidget {
         children: [
           // --- Image Section ---
           ClipRRect(
-            // Radius applied only to the top of the card
             borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
-            child: Image.asset(
-              image, // Product Image
-              fit: BoxFit.cover,
-              height: 200,
-              width: double.infinity,
+            child: Stack(
+              children: [
+                Image.asset(
+                  image, // Product Image
+                  fit: BoxFit.cover,
+                  height: 200,
+                  width: double.infinity,
+                ),
+
+                // Sale Icon
+                if (saleimage != null)
+                  Positioned(
+                    top: 8,
+                    right: 8,
+                    child: Image.asset(
+                      saleimage!,
+                      height: 24, // constrain size
+                      width: 24,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+              ],
             ),
           ),
-
-          // --- Content Section ---
           SizedBox(height: 12), // Space between image and text
 
-          // Title and Optional Icon
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
             child: Row(
@@ -66,21 +81,12 @@ class ProductCard extends StatelessWidget {
                     style: Theme.of(context).textTheme.displayMedium
                   ),
                 ),
-                if(saleimage != null)
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0), // Space between title and icon
-                    child: Image.asset(
-                      saleimage!,
-                      height: 24,
-                      width: 24,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+              Icon(FontAwesomeIcons.cartShopping,color: AppColors.red,),
               ],
             ),
           ),
 
-          SizedBox(height: 4), // Space between title and price
+          SizedBox(height: 4),
 
           // Price Section
           Padding(
