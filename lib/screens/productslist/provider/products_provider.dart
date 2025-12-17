@@ -3,7 +3,7 @@ import 'package:momarketplace/screens/productdetail/model/product_detail_respons
 import 'package:momarketplace/screens/productslist/model/products_response.dart';
 import 'package:momarketplace/services/products_service.dart';
 
-import '../screens/productslist/model/products.dart';
+import '../model/products.dart';
 
 class ProductsProvider extends ChangeNotifier {
   final ProductService _productService = ProductService();

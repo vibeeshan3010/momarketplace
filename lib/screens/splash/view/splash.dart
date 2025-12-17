@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Navigation logic remains the same
+
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         Future.delayed(const Duration(milliseconds: 300), () {
@@ -77,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen>
             animation: _radialAnimation,
             builder: (context, child) {
               return CustomPaint(
-                size: Size.infinite, // Fills the entire screen
+                size: Size.infinite,
                 painter: RadialExpansionPainter(
                   animation: _radialAnimation,
                   color: AppColors.red

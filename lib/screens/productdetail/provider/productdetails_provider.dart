@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:momarketplace/services/product_detail_service.dart';
 
-import '../screens/productdetail/model/product_detail_response.dart';
-import '../screens/productslist/model/products.dart';
-import '../services/products_service.dart';
+import '../model/product_detail_response.dart';
+import '../../productslist/model/products.dart';
+import '../../../services/products_service.dart';
 
 class ProductDetailsProvider extends ChangeNotifier{
-  final ProductService _productService = ProductService();
+  final ProductDetailService _productDetailService = ProductDetailService();
   int? _productId;
   bool _isLoading = false;
   bool get isLoading => _isLoading;
@@ -26,7 +27,7 @@ class ProductDetailsProvider extends ChangeNotifier{
     notifyListeners();
     try{
 
-      final result = await _productService.getProductDetailService(productId);
+      final result = await _productDetailService.getProductDetailService(productId);
 
       _productDetailResponse =  result;
 

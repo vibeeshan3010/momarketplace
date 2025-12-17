@@ -1,29 +1,27 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:momarketplace/screens/productdetail/model/product_detail_response.dart';
-import 'package:momarketplace/screens/productslist/model/products_response.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../core/network/DioClient.dart';
+import '../screens/productdetail/model/product_detail_response.dart';
 
-class ProductService {
+class ProductDetailService {
   final Dio _dio = DioClient.dio;
 
 
-  Future<ProductResponse> getProductsListService() async {
+  Future<ProductDetailResponse> getProductDetailService(int productId) async {
     try {
-      debugPrint('🔄 Fetching products from API...');
+      debugPrint('🔄 Fetching product detail...');
 
-      final response = await _dio.get('/products');
+      final response = await _dio.get('/products/$productId');
 
       debugPrint('✅ Response received - Status: ${response.statusCode}');
 
       if (response.statusCode == 200 && response.data != null) {
-        debugPrint('✅ Products fetched successfully');
-        return ProductResponse.fromJson(response.data);
+        return ProductDetailResponse.fromJson(response.data);
       } else {
         throw Exception('Invalid response: ${response.statusCode}');
       }
-
     } on DioException catch (e) {
       debugPrint('❌ DioException: ${e.type}');
       debugPrint('❌ Message: ${e.message}');
@@ -41,14 +39,12 @@ class ProductService {
           throw Exception('Network error: ${e.message}');
       }
     } on TypeError catch (e) {
-      debugPrint('❌ Type error (likely JSON parsing issue): $e');
-      throw Exception('Data format error. Please contact support.');
+      debugPrint('❌ JSON parsing error: $e');
+      throw Exception('Data format error.');
     } catch (e, stackTrace) {
       debugPrint('❌ Unexpected error: $e');
       debugPrint('Stack trace: $stackTrace');
-      throw Exception('Failed to fetch products: $e');
+      throw Exception('Failed to fetch product detail');
     }
   }
-
-
 }

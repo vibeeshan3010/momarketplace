@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:momarketplace/provider/productdetails_provider.dart';
-import 'package:momarketplace/provider/products_provider.dart';
+import 'package:momarketplace/screens/productdetail/provider/productdetails_provider.dart';
+import 'package:momarketplace/screens/productslist/provider/products_provider.dart';
 import 'package:momarketplace/util/strings.dart';
 import 'package:momarketplace/widgets/products_card.dart';
 import 'package:provider/provider.dart';
