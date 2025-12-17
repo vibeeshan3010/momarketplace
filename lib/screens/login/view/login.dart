@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../util/app_colors.dart';
 import '../../../util/strings.dart';
+import '../../../widgets/custom_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,19 +14,19 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, // number of tabs
+      length: 2,
       child: Scaffold(
         body: Column(
           children: [
-            const SizedBox(height: 50), // optional spacing from top
+            const SizedBox(height: 50),
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 child: TabBar(
                   labelColor: AppColors.red,
                   unselectedLabelColor: AppColors.red,
-                  indicatorColor: Colors.red, // <-- set your line color here
-                  indicatorWeight: 3, // optional: thickness of the line
+                  indicatorColor: Colors.red,
+                  indicatorWeight: 3,
                   labelStyle: const TextStyle(fontWeight: FontWeight.bold),
                   tabs: [
                     Tab(text: AppStrings.login.toUpperCase()),
@@ -38,7 +39,6 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
               child: TabBarView(
                 children: [
-                  // Login tab content
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -49,27 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 50,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.mobilenumber, // your hint
-                              border: UnderlineInputBorder(
-                                // You can customize the look of the border here
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                          // If you want to remove the border when the field is focused,
-                          // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child: CustomTextField(hintText: AppStrings.mobilenumber,),
                         ),
                         SizedBox(height: 20,),
                         ElevatedButton(
@@ -81,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                   ),
-                  // Register tab content
+
                   SingleChildScrollView(
                     child: Column(
                       children: [
@@ -90,126 +70,27 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(AppStrings.createaccount,style: Theme.of(context).textTheme.bodyMedium,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.fullname, // your hint
-                              border: UnderlineInputBorder(
-                                // You can customize the look of the border here
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                              // If you want to remove the border when the field is focused,
-                              // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child: CustomTextField(hintText:AppStrings.fullname ,),
                         ),
                         SizedBox(height: 25,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.displayname,
-                              border: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                              // If you want to remove the border when the field is focused,
-                              // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child: CustomTextField(hintText:AppStrings.displayname ,),
                         ),
                         SizedBox(height: 25,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.email, // your hint
-                              border: UnderlineInputBorder(
-                                // You can customize the look of the border here
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                              // If you want to remove the border when the field is focused,
-                              // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child: CustomTextField(hintText:AppStrings.email ,),
                         ),
                         SizedBox(height: 25,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.mobile, // your hint
-                              border: UnderlineInputBorder(
-                                // You can customize the look of the border here
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                              // If you want to remove the border when the field is focused,
-                              // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child:CustomTextField(hintText:AppStrings.mobile ,),
                         ),
                         SizedBox(height: 25,),
                         SizedBox(
                           width: MediaQuery.of(context).size.width/1.2,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText:AppStrings.referalcode, // your hint
-                              border: UnderlineInputBorder(
-                                // You can customize the look of the border here
-                                borderSide: BorderSide(
-                                  color: Colors.grey, // The color of the bottom border
-                                  width: 2.0,        // The thickness of the bottom border
-                                ),
-                              ),
-                              // If you want to remove the border when the field is focused,
-                              // you can also set the focusedBorder property:
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: AppColors.red,
-                                  width: 2.0,
-                                ),
-                              ),
-                              contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10), // optional padding
-                            ),
-                          ),
+                          child: CustomTextField(hintText:AppStrings.referalcode ,),
                         ),
                         SizedBox(height: 25,),
                         ElevatedButton(
@@ -230,3 +111,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+

@@ -508,7 +508,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     autoPlayInterval: Duration(seconds: 4),
                     autoPlayAnimationDuration: Duration(milliseconds: 800),
                     enlargeCenterPage: true,
-                    viewportFraction: 1, // optional: full width slide
+                    viewportFraction: 1,
                   ),
                   items:
                   [
@@ -542,7 +542,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             AppStrings.topproducts,
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          const SizedBox(width: 6), // spacing between text and star
+                          const SizedBox(width: 6),
                           Image.asset(
                             "assets/icons/star.png",
                             height: 20,
@@ -709,7 +709,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 50,
                             ),
                           ),
-                          const SizedBox(width: 6), // spacing between text and star
+                          const SizedBox(width: 6),
                           Text(
                             AppStrings.designer,
                             style: Theme.of(context).textTheme.titleLarge,
@@ -734,7 +734,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 300,
                   child: PageView.builder(
                     controller: PageController(
-                      viewportFraction: 0.75, // shows part of next card
+                      viewportFraction: 0.75,
                     ),
                     itemCount: products.length,
                     physics: const PageScrollPhysics(),
@@ -764,7 +764,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             AppStrings.recentlyadded,
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          const SizedBox(width: 6), // spacing between text and star
+                          const SizedBox(width: 6),
                           Image.asset(
                             "assets/icons/recent.png",
                             height: 20,
