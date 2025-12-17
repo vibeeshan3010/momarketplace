@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:momarketplace/provider/productdetails_provider.dart';
 import 'package:momarketplace/provider/products_provider.dart';
 import 'package:momarketplace/util/strings.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +38,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Consumer<ProductsProvider>(
+      body: Consumer<ProductDetailsProvider>(
         builder: (context, provider, _) {
           if (provider.isLoading) {
             return  Center(
@@ -294,7 +295,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
   }
 
   void getProductDetails() {
-    final provider = Provider.of<ProductsProvider>(context,listen:false);
+    final provider = Provider.of<ProductDetailsProvider>(context,listen:false);
     provider.getProductDetails(provider.productId!);
   }
 }

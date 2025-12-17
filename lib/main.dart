@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:momarketplace/provider/productdetails_provider.dart';
 import 'package:momarketplace/provider/products_provider.dart';
 import 'package:momarketplace/route/route_manager.dart';
 import 'package:momarketplace/route/routes.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ProductsProvider()),
+          ChangeNotifierProvider(create: (_) => ProductDetailsProvider()),
         ],
         child: MaterialApp(
           initialRoute: Routes.splash,

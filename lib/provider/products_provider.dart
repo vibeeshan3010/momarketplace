@@ -36,32 +36,8 @@ class ProductsProvider extends ChangeNotifier {
     }
   }
 
-  void setProductDetails(int productId) {
-    _productId = productId;
-  }
 
-   int? getProductId(){
-    return _productId;
-}
 
-  Future<void> getProductDetails(int productId) async {
-  _isLoading = true;
-  notifyListeners();
-  try{
 
-    final result = await _productService.getProductDetailService(productId);
-
-    _productDetailResponse =  result;
-
-    _isLoading = false;
-
-    print("title ${_productDetailResponse.title}");
-    print("Description ${_productDetailResponse.description}");
-    notifyListeners();
-  }catch(e){
-    debugPrint("Error fetching response $e");
-  }
-
-  }
 
 }

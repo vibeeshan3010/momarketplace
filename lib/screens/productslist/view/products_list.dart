@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:momarketplace/provider/productdetails_provider.dart';
 import 'package:momarketplace/provider/products_provider.dart';
 import 'package:momarketplace/util/strings.dart';
 import 'package:momarketplace/widgets/products_card.dart';
@@ -59,7 +60,8 @@ class _ProductsListState extends State<ProductsList> {
               final product = provider.products[index];
               return GestureDetector(
                 onTap: (){
-                  provider.setProductDetails(product.id);
+                  final productdetailsprovider =Provider.of<ProductDetailsProvider>(context,listen: false);
+                  productdetailsprovider.setProductDetails(product.id);
                   Navigator.pushNamed(context, Routes.productsdetails);
                 },
                 child: ProductsCard(

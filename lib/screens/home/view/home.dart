@@ -156,9 +156,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              "assets/icons/womenfashion.png",
-                              color: Theme.of(context).iconTheme.color,
+                            Container(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset(
+                                  "assets/icons/womenfashion.png",
+                                  color: Theme.of(context).iconTheme.color,
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
                             ),
                             SizedBox(height: 5),
                             Text(
