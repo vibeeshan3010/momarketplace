@@ -37,14 +37,13 @@ class ProductsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(url),
-            Padding(padding: const EdgeInsets.all(8.0), child: Text(title)),
+            Padding(padding: const EdgeInsets.all(8.0), child: Text(title,overflow: TextOverflow.ellipsis,maxLines: 2,)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 8.0,
-                    vertical: 4.0,
                   ),
                   child: Text('Rs.${price}'),
                 ),
